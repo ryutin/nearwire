@@ -1,9 +1,16 @@
+#!/usr/bin/env python3
+
 #!/usr/local/bin/python3
 
 import requests
 import json
 import sys
 import os
+import mysql.connector
+
+cnx = connection.MySQLConnection(user='rw_user', password='3br!',
+                                 host='nearwire-db-instance.cm2yqrbvmu6t.us-east-1.rds.amazonaws.com',
+                                 database='nearwire_dbs')
 
 # http://webhose.io/filterWebContent?
 # token=API_KEY
@@ -62,5 +69,6 @@ while results_available>0 :
 
     print("results_available:" + str(results_available) + " requests_left:" + str(requests_left))
     print("next_url:" + next_url)
-#    if x>100 :
-#        sys.exit(0)
+
+
+cnx.close()

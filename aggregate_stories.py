@@ -1,9 +1,9 @@
-#!/usr/local/bin/python3
+#!env python3
 
 import sys
 import json
 import re
-
+import mysql.connector
 
 json_file = open('chicago-il.json','r')
 
