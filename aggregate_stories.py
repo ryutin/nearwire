@@ -5,6 +5,8 @@ import json
 import re
 import mysql.connector
 
+#mysql.connector.connect(host='localhost',database='mysql',user='root',password='')
+
 json_file = open('chicago-il.json','r')
 
 title_re = re.compile(r'"title": ')
